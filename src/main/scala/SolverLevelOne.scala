@@ -22,4 +22,12 @@ object SolverLevelOne extends App {
 
   //Need to write a parser for tasks...
 
+  //Test for solve post
+
+  val solve = Http("http://34.122.17.54:8080/api/task/submit")
+    .postData("{ \"answer\": \"346\" }")
+    .header("puzzle_session", token)
+    .asString
+  println("Server answer: " + solve)
+
 }
