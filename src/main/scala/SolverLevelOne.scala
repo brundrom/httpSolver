@@ -10,9 +10,16 @@ object SolverLevelOne extends App {
   //  .asString
   //println("My token is " + response)
 
-  val response = Http("http://34.122.17.54:8080/api/task/help")
+  //val response = Http("http://34.122.17.54:8080/api/task/help")
+  //  .header("puzzle_session", token)
+  //  .asString
+  //println("My task is " + response)
+
+  val task = Http("http://34.122.17.54:8080/api/task")
     .header("puzzle_session", token)
     .asString
-  println("My task is " + response)
+  println("My task is " + task)
+
+  //Need to write a parser for tasks...
 
 }
